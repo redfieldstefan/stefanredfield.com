@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./background.module.css";
 
-console.log(styles);
-
 const tileCount = 2048;
 
 export default () => {
