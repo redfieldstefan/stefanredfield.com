@@ -6,7 +6,6 @@ const findBackgroundColor = (element) => {
   const hex = rgbHex(backgroundColor);
   const isClear = hex === "00000000"
 
-  console.log({isClear, hex})
   if (isClear && element.parentElement) {
     return findBackgroundColor(element.parentElement)
   }
