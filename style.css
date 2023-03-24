@@ -61,7 +61,6 @@ p {
 	background: #004d00;
 }
 
-
 #march-23-2023 #behind-my-square {
 	width: 27%;
 	aspect-ratio: 1 / 1;
@@ -71,6 +70,8 @@ p {
 }
 #march-23-2023 #my-square {
 	aspect-ratio: 1 / 1;
+	max-width: 400px;
+	min-width: 150px;
 	background: red;
 	border-radius: 3px;
 	display: flex;
