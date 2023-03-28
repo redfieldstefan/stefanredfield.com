@@ -30,7 +30,7 @@ const blockyGriddyPatterny = (() => {
     newDiv.style.position = 'absolute';
     newDiv.style.top = randomWholeNum(maxY);
     newDiv.style.right = randomWholeNum(maxX);
-    newDiv.style.height = randomWholeNum(1000);
+    newDiv.style.height = randomWholeNum(500);
     newDiv.style.transform = `skew(${randomWholeNum(360)}deg)`;
     newDiv.style["box-shadow"] = `${myShadow}`;
     newDiv.style["-webkit-box-shadow"] = `${myShadow}`;
