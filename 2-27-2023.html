@@ -1,0 +1,56 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="random fuzzy blocky ones"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<title>Stefan Redfield</title>
+    <style>
+      :root {
+        --box-shadow-0: 0px 0px 200px 130px rgb(255, 255, 255);
+        --box-shadow-1: 0px 0px 50px 100px rgb(0, 0, 0);
+        --box-shadow-2: 0px 0px 50px 10px rgb(230, 195, 0);
+      }
+
+			#march-27-2023 {
+				background: rgb(201, 201, 201);
+        display: inline-block;
+			}
+
+      .blocky-one::before {
+        content: "";
+        -webkit-box-shadow: var(--box-shadow-0);
+				-moz-box-shadow: var(--box-shadow-0);
+				box-shadow: var(--box-shadow-0);
+      }
+
+      .blocky-one {
+        height: 0;
+        width: 0;
+      }
+
+      .blocky-one::after {
+        content: "";
+        -webkit-box-shadow: var(--box-shadow-2);
+				-moz-box-shadow: var(--box-shadow-2);
+				box-shadow: var(--box-shadow-2);
+      }
+    </style>
+	</head>
+	<body id="march-27-2023">
+		<header>
+			<p class="my-name">Stefan Redfield</p> 
+			<p class="my-title">
+				Director of Engineering, <a href="mailto:redfield.stefan@gmail.com" target="blank">redfield.stefan@gmail.com</a>
+			</p>
+		</header>
+    <main>
+    </main>
+	</body>
+  <script type='text/javascript' src="./dist/backgrounder.js"></script>
+  <script type='text/javascript' src="./dist/blocky-griddy-patterny.js"></script>
+</html>
