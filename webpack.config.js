@@ -10,9 +10,6 @@ const entryFiles = glob.sync('./scripts/*.js').map(file => {
 });
 
 const entries = entryFiles.reduce((accum, { file, base }) => {
-
-  console.log({file, base})
-
 	return {
 		[base]: file,
 		...accum
@@ -24,5 +21,15 @@ export default {
   output: {
     filename: '[name].js',
     path: path.resolve('dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        resolve: {
+          fullySpecified: false, // disable the behaviour
+        },
+      },
+    ],
   }
 }

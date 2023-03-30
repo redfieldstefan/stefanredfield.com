@@ -1,0 +1,1 @@
+(()=>{"use strict";window.makeAndStyleDivs=({min:e=1,max:t=1,target:n},a)=>{const m=n||document.getElementsByTagName("body")[0],o=Math.floor(Math.random()*(t-e)+e);new Array(o).fill(null).map((()=>{const e=document.createElement("div");return a&&a(e),e})).forEach((e=>m.appendChild(e)))}})();
