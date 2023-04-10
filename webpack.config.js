@@ -1,26 +1,26 @@
-import glob from 'glob';
-import path from 'path';
+import glob from 'glob'
+import path from 'path'
 
-const entryFiles = glob.sync('./scripts/*.js').map(file => {
-  const base = file.replace("scripts/", "").replace(".js", "")
+const entryFiles = glob.sync('./scripts/*.js').map((file) => {
+  const base = file.replace('scripts/', '').replace('.js', '')
   return {
     base,
-    file: `./${file}` 
+    file: `./${file}`,
   }
-});
+})
 
 const entries = entryFiles.reduce((accum, { file, base }) => {
-	return {
-		[base]: file,
-		...accum
-	}
+  return {
+    [base]: file,
+    ...accum,
+  }
 }, {})
 
 export default {
-	entry: entries,
+  entry: entries,
   output: {
     filename: '[name].js',
-    path: path.resolve('dist')
+    path: path.resolve('dist'),
   },
   module: {
     rules: [
@@ -31,5 +31,5 @@ export default {
         },
       },
     ],
-  }
+  },
 }

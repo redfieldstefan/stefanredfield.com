@@ -1,67 +1,73 @@
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<meta name="description" content="purpley"/>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-		<title>Stefan Redfield</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="purpley" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <title>Stefan Redfield</title>
     <style>
-			#march-24-2023 {
-				background: #f5f5dc;
-			}
+      #march-24-2023 {
+        background: #f5f5dc;
+      }
 
-			#behind-my-square {
-				width: 0;
-				height: 0;
-				position: absolute;
-				top: 400px;
-				right: 40%;
-				transform: skew(20deg);
+      #behind-my-square {
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 400px;
+        right: 40%;
+        transform: skew(20deg);
 
-				-webkit-box-shadow: 0px 16px 136px 209px rgba(6 6 140 / 100%);
-				-moz-box-shadow: 0px 16px 136px 209px rgba(6 6 140 / 100%);
-				box-shadow: 0px 16px 136px 209px rgba(6 6 140 / 100%);
-			}
-			
-			#my-square {
-				transform: skew(25deg);
-				-webkit-box-shadow: 0px 16px 40px 75px rgba(0 0 77 / 100%);
-				-moz-box-shadow: 0px 16px 40px 75px rgba(0 0 77 / 100%);
-				box-shadow: 0px 16px 40px 75px rgba(0 0 77 / 100%);
-			}
+        -webkit-box-shadow: 0px 16px 136px 209px rgba(6 6 140 / 100%);
+        -moz-box-shadow: 0px 16px 136px 209px rgba(6 6 140 / 100%);
+        box-shadow: 0px 16px 136px 209px rgba(6 6 140 / 100%);
+      }
 
-			#innest-square {
-				-webkit-box-shadow: 0px 16px 28px 25px rgba(0 0 0 / 100%);
-				-moz-box-shadow: 0px 16px 28px 25px rgba(0 0 0 / 100%);
-				box-shadow: 0px 16px 28px 25px rgba(0 0 0 / 100%);
-			}
+      #my-square {
+        transform: skew(25deg);
+        -webkit-box-shadow: 0px 16px 40px 75px rgba(0 0 77 / 100%);
+        -moz-box-shadow: 0px 16px 40px 75px rgba(0 0 77 / 100%);
+        box-shadow: 0px 16px 40px 75px rgba(0 0 77 / 100%);
+      }
 
-			@media (max-width: 425px) {
-				#behind-my-square {
-					top: 400px;
-					right: 50%;
-				}
-			}
+      #innest-square {
+        -webkit-box-shadow: 0px 16px 28px 25px rgba(0 0 0 / 100%);
+        -moz-box-shadow: 0px 16px 28px 25px rgba(0 0 0 / 100%);
+        box-shadow: 0px 16px 28px 25px rgba(0 0 0 / 100%);
+      }
+
+      @media (max-width: 425px) {
+        #behind-my-square {
+          top: 400px;
+          right: 50%;
+        }
+      }
     </style>
-	</head>
-	<body id="march-24-2023">
-		<header>
-			<p class="my-name">Stefan Redfield</p> 
-			<p class="my-title">
-				Director of Engineering, <a href="mailto:redfield.stefan@gmail.com" target="blank">redfield.stefan@gmail.com</a>
-			</p>
-		</header>
+  </head>
+  <body id="march-24-2023">
+    <header>
+      <p class="my-name">Stefan Redfield</p>
+      <p class="my-title">
+        Director of Engineering,
+        <a href="mailto:redfield.stefan@gmail.com" target="blank"
+          >redfield.stefan@gmail.com</a
+        >
+      </p>
+    </header>
     <main>
-     <div id="behind-my-square">
-      <div id="my-square">
-        <div id="innest-square"></div>
+      <div id="behind-my-square">
+        <div id="my-square">
+          <div id="innest-square"></div>
+        </div>
       </div>
-    </div>
     </main>
-	</body>
-  <script type='text/javascript' src="./dist/backgrounder.js"></script>
+  </body>
+  <script type="text/javascript" src="./dist/backgrounder.js"></script>
 </html>

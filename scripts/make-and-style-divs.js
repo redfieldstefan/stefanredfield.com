@@ -1,21 +1,21 @@
-const makeAndStyleDivs = ({min = 1, max = 1, target}, format) => {
-  const body = target || document.getElementsByTagName('body')[0];
-  const howManyBlockyOnes = Math.floor(Math.random() * (max - min) + min);
-  const newBlockyArray = new Array(howManyBlockyOnes).fill(null);
+const makeAndStyleDivs = ({ min = 1, max = 1, target }, format) => {
+  const body = target || document.getElementsByTagName('body')[0]
+  const howManyBlockyOnes = Math.floor(Math.random() * (max - min) + min)
+  const newBlockyArray = new Array(howManyBlockyOnes).fill(null)
 
   const newBlockyOnes = newBlockyArray.map(() => {
-    const newDiv = document.createElement("div");
+    const newDiv = document.createElement('div')
 
-    format && format(newDiv);
+    format && format(newDiv)
 
-    return newDiv;
-  });
+    return newDiv
+  })
 
-  newBlockyOnes.forEach(one => body.appendChild(one));
+  newBlockyOnes.forEach((one) => body.appendChild(one))
 
-  return;
-};
+  return
+}
 
-window.makeAndStyleDivs = makeAndStyleDivs;
+window.makeAndStyleDivs = makeAndStyleDivs
 
-export default makeAndStyleDivs;
+export default makeAndStyleDivs

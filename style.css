@@ -1,66 +1,58 @@
 * {
-	margin: 0;
-	box-sizing: border-box;
-	width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 body {
-	background: #fbfbfc;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	font-family: 'Source Sans Pro', sans-serif;
-	color: #2E2E2E;
-	padding: 20px 40px;
+  background: #fbfbfc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #2e2e2e;
+  padding: 20px 40px;
 }
 
 main {
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
-	width: 100%;
+  width: 100%;
 }
 
 p {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .my-name {
-	color: #00008B;
-	font-size: 30px;
-	margin: 0;
+  color: #00008b;
+  font-size: 30px;
+  margin: 0;
 }
 
 .my-title {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .main-text {
-	max-width: 100%;
-	width: 550px;
-	font-size: 16px;
-	font-weight: 300;
-	line-height: 1.2;
-	margin-bottom: 10px;
+  max-width: 100%;
+  width: 550px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 
 .email-link {
-	color: #00008B;
+  color: #00008b;
 }
 
 #march-20-2023 {
-	background: #2E2E2E;
-}
-
-
-
-@media (max-width: 425px) {
-	header {
-		padding: 20px;
-	}
+  background: #2e2e2e;
 }

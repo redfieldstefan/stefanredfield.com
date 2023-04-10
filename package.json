@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "webpack": "^5.76.3"
   },
   "devDependencies": {
+    "prettier": "^2.8.7",
     "webpack-cli": "^5.0.1"
   }
 }

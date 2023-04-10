@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="pink" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <title>Stefan Redfield</title>
+    <style>
+      #april-4-2023 {
+        background: rgb(255, 232, 230);
+      }
+      .triangle {
+        width: 0;
+        height: 0;
+        border-top: 1px solid transparent;
+        border-bottom: 400px solid white;
+        border-right: 400px solid transparent;
+        position: relative;
+      }
+
+      .triangle:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: px solid transparent;
+        border-bottom: 396px solid rgb(255, 232, 230);
+        border-right: 396px solid transparent;
+        position: absolute;
+        top: 2px;
+        left: 1px;
+      }
+
+      .line-inside {
+        height: 200px;
+        margin: 0 10px;
+        width: 10px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body id="april-4-2023">
+    <header>
+      <p class="my-name">Stefan Redfield</p>
+      <p class="my-title">
+        Director of Engineering,
+        <a href="mailto:redfield.stefan@gmail.com" target="blank"
+          >redfield.stefan@gmail.com</a
+        >
+      </p>
+    </header>
+    <main>
+      <div class="triangle"></div>
+    </main>
+  </body>
+  <script type="text/javascript" src="./dist/backgrounder.js"></script>
+  <script type="text/javascript" src="./dist/make-and-style-divs.js"></script>
+  <script>
+    const triangleLines = window.innerWidth / 4 / 4
+    const variance = 2
+    let currentLine = 1
+
+    // window.makeAndStyleDivs({min: triangleLines, max: triangleLines}, (div) => {
+
+    // });
+  </script>
+</html>

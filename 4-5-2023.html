@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="fold" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <title>Stefan Redfield</title>
+    <style>
+      #april-4-2023 {
+        background: rgb(255, 232, 230);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        height: 500px;
+        width: 500px;
+        position: relative;
+      }
+
+      .triangle {
+        width: 1px;
+        height: 1px;
+        border-top: 0px solid transparent;
+        border-bottom: 200px solid white;
+        border-right: 200px solid transparent;
+        position: absolute;
+        top: 270;
+        box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
+
+      .triangle-top {
+        content: '';
+        width: 1px;
+        height: 1px;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        border-right: 50px solid #dddddd;
+        position: absolute;
+        z-index: 2;
+        top: 220;
+        right: 300;
+      }
+
+      .cover {
+        height: 200px;
+        width: 400px;
+        background-color: rgb(255, 232, 230);
+        position: absolute;
+        transform: rotate(45deg);
+        z-index: 1;
+        left: 112;
+        top: 191;
+      }
+    </style>
+  </head>
+  <body id="april-4-2023">
+    <header>
+      <p class="my-name">Stefan Redfield</p>
+      <p class="my-title">
+        Director of Engineering,
+        <a href="mailto:redfield.stefan@gmail.com" target="blank"
+          >redfield.stefan@gmail.com</a
+        >
+      </p>
+    </header>
+    <main>
+      <div class="triangle"></div>
+      <div class="cover"></div>
+      <div class="triangle-top"></div>
+    </main>
+  </body>
+  <script type="text/javascript" src="./dist/backgrounder.js"></script>
+  <script type="text/javascript" src="./dist/make-and-style-divs.js"></script>
+</html>
