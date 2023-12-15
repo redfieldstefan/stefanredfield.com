@@ -33,7 +33,6 @@ p {
   color: #00008b;
   font-size: 30px;
   margin: 0;
-  font-family: 'Righteous', cursive;
 }
 
 .my-title {
@@ -55,4 +54,26 @@ p {
 
 #march-20-2023 {
   background: #2e2e2e;
+}
+
+.frame-wrap {
+  width: 200px;
+  height: 100px;
+  padding: 0;
+  overflow: hidden;
+  display: inline-block;
+}
+.frame {
+  width: 800px;
+  height: 520px;
+  border: 1px solid black;
+}
+.frame {
+  -ms-zoom: 0.5;
+  -moz-transform: scale(0.5);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.5);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
 }

@@ -4,10 +4,14 @@
   "description": "What fun!",
   "main": "index.js",
   "type": "module",
+  "browser": {
+    "fs": false
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "dev": "yarn build && http-server -c-1"
   },
   "repository": {
     "type": "git",
@@ -20,8 +24,10 @@
   },
   "homepage": "https://github.com/redfieldstefan/stefanredfield.com#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "glob": "^9.3.2",
     "hex-contrast-color": "^1.0.1",
+    "http-server": "^14.1.1",
     "path": "^0.12.7",
     "rgb-hex": "^4.0.1",
     "webpack": "^5.76.3"
