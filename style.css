@@ -31,8 +31,9 @@ p {
 
 .my-name {
   color: #00008b;
-  font-size: 30px;
+  font-size: 28px;
   margin: 0;
+  font-weight: 600;
 }
 
 .my-title {
@@ -63,11 +64,13 @@ p {
   overflow: hidden;
   display: inline-block;
 }
+
 .frame {
   width: 800px;
   height: 520px;
   border: 1px solid black;
 }
+
 .frame {
   -ms-zoom: 0.5;
   -moz-transform: scale(0.5);
