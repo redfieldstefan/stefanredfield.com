@@ -1,87 +1,76 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="flip book one" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <title>Stefan Redfield</title>
-  </head>
-  <body id="march-29-2023">
-    <script type="text/javascript" src="./dist/create-links-array.js"></script>
-    <header>
-      <p class="my-name">Stefan Redfield</p>
-      <p class="my-title">
-        Director of Engineering,
-        <a href="mailto:redfield.stefan@gmail.com" target="blank"
-          >redfield.stefan@gmail.com</a
-        >
-      </p>
-    </header>
-    <main></main>
-  </body>
-  <script type="text/javascript" src="./dist/backgrounder.js"></script>
-  <script type="text/javascript" src="./dist/make-and-style-divs.js"></script>
-  <script>
-    const findDegree = (rotateProp) => {
-      if (!rotateProp) {
-        return 0
-      }
 
-      const startIndex = rotateProp.indexOf(`(`) + 1
-      const endIndex = rotateProp.indexOf('deg)')
-      const currentDegree = parseInt(rotateProp.substring(startIndex, endIndex))
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="flip book one" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <title>Stefan Redfield</title>
+</head>
 
-      return currentDegree < 90 ? currentDegree : 0
+<body id="march-29-2023">
+  <main></main>
+</body>
+<script type="text/javascript" src="./dist/backgrounder.js"></script>
+<script type="text/javascript" src="./dist/make-and-style-divs.js"></script>
+<script>
+  const findDegree = (rotateProp) => {
+    if (!rotateProp) {
+      return 0
     }
 
-    const starting = {
-      position: 'absolute',
-      top: `50%`,
-      left: 0,
-      height: '50px',
-      width: '50px',
-      background: 'black',
-      transform: `rotate(0deg)`,
-      'z-index': 1,
-    }
-    const flipState = JSON.parse(localStorage.getItem('flipState'))
-    const futureDegree =
-      findDegree(flipState?.transform || starting?.transform) + 5
-    const spreadVal = Math.abs((45 - futureDegree) / 45) * 25
-    let styles
+    const startIndex = rotateProp.indexOf(`(`) + 1
+    const endIndex = rotateProp.indexOf('deg)')
+    const currentDegree = parseInt(rotateProp.substring(startIndex, endIndex))
 
-    if (!localStorage.getItem('flipState')) {
-      styles = starting
-    } else {
-      styles = {
-        ...flipState,
-        transform: `rotate(${futureDegree}deg)`,
-        left:
-          flipState.left < window.innerWidth
-            ? flipState.left + 5
-            : starting.left,
-      }
-    }
+    return currentDegree < 90 ? currentDegree : 0
+  }
 
-    window.makeAndStyleDivs({}, (div) => {
-      div.className = 'the-boulder'
-      Object.keys(styles).forEach((property) => {
-        div.style[property] = styles[property]
-      })
+  const starting = {
+    position: 'absolute',
+    top: `50%`,
+    left: 0,
+    height: '50px',
+    width: '50px',
+    background: 'black',
+    transform: `rotate(0deg)`,
+    'z-index': 1,
+  }
+  const flipState = JSON.parse(localStorage.getItem('flipState'))
+  const futureDegree =
+    findDegree(flipState?.transform || starting?.transform) + 5
+  const spreadVal = Math.abs((45 - futureDegree) / 45) * 25
+  let styles
+
+  if (!localStorage.getItem('flipState')) {
+    styles = starting
+  } else {
+    styles = {
+      ...flipState,
+      transform: `rotate(${futureDegree}deg)`,
+      left:
+        flipState.left < window.innerWidth
+          ? flipState.left + 5
+          : starting.left,
+    }
+  }
+
+  window.makeAndStyleDivs({}, (div) => {
+    div.className = 'the-boulder'
+    Object.keys(styles).forEach((property) => {
+      div.style[property] = styles[property]
     })
+  })
 
-    window.makeAndStyleDivs({}, (div) => {
-      div.className = 'its-shadow'
-      const dynamicLeft = Math.floor(styles.left + Math.abs(25 - spreadVal))
+  window.makeAndStyleDivs({}, (div) => {
+    div.className = 'its-shadow'
+    const dynamicLeft = Math.floor(styles.left + Math.abs(25 - spreadVal))
 
-      div.style.cssText = `
+    div.style.cssText = `
         z-index: 0;
         height: 0;
         width: ${spreadVal * 2}px;
@@ -91,9 +80,10 @@
         background: yellow;
         box-shadow: 0px 0px ${spreadVal + 10}px 5px rgb(27, 23, 53)
       `
-    })
+  })
 
-    localStorage.setItem('flipState', JSON.stringify(styles))
-  </script>
-  <script type="text/javascript" src="./dist/minimal-view.js"></script>
+  localStorage.setItem('flipState', JSON.stringify(styles))
+</script>
+<script type="text/javascript" src="./dist/minimal-view.js"></script>
+
 </html>

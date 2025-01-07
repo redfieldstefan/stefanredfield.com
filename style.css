@@ -10,7 +10,6 @@ body {
   flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
   color: #2e2e2e;
-  padding: 20px 40px;
 }
 
 main {
@@ -30,14 +29,16 @@ p {
 }
 
 .my-name {
-  color: #00008b;
+  color: black;
   font-size: 28px;
   margin: 0;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .my-title {
   font-size: 14px;
+  color: black;
 }
 
 .main-text {

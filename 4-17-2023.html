@@ -1,89 +1,78 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="green halo" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <title>Stefan Redfield</title>
-    <style>
-      #april-17-2023 {
-        background: rgb(0, 0, 150);
-        overflow: hidden;
-      }
 
-      header {
-        z-index: 1;
-      }
-
-      .blocky-one {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .blocky-one::after {
-        --main-shadow-color: 0 0 50px 25px rgb(0, 0, 150);
-        height: 1px;
-        width: 1px;
-        content: '';
-        box-shadow: var(--main-shadow-color);
-        -webkit-box-shadow: var(--main-shadow-color);
-        -moz-box-shadow: var(--main-shadow-color);
-        top: 50%;
-        left: 50%;
-      }
-    </style>
-  </head>
-  <body id="april-17-2023">
-    <header>
-      <p class="my-name">Stefan Redfield</p>
-      <p class="my-title">
-        Director of Engineering,
-        <a href="mailto:redfield.stefan@gmail.com" target="blank"
-          >redfield.stefan@gmail.com</a
-        >
-      </p>
-    </header>
-    <main></main>
-  </body>
-  <script type="text/javascript" src="./dist/backgrounder.js"></script>
-  <script type="text/javascript" src="./dist/minimal-view.js"></script>
-  <script type="text/javascript" src="./dist/make-and-style-divs.js"></script>
-  <script type="text/javascript" src="./dist/create-links-array.js"></script>
-  <script>
-    const maxY = window.innerHeight
-    const maxX = window.innerWidth
-    let x = 50
-    let y = 50
-
-    const plusOrMinus10 = (val = 0) => {
-      const plusOrMinus = Math.floor(Math.random() * 15)
-
-      return Math.random() * 100 > 50 ? val + plusOrMinus : val - plusOrMinus
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="green halo" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <title>Stefan Redfield</title>
+  <style>
+    #april-17-2023 {
+      background: rgb(0, 0, 150);
+      overflow: hidden;
     }
 
-    const randomWholeNum = (max = 0) => {
-      return Math.floor(Math.random() * max)
+    header {
+      z-index: 1;
     }
 
-    new Array(100).fill(null).forEach(() => {
-      if (y > maxY) {
-        return null
-      }
+    .blocky-one {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      window.makeAndStyleDivs({}, (div) => {
-        const myShadow = `0px 2px 30px 5px rgb(0, 0, 205)`
-        const dimensions = 125
+    .blocky-one::after {
+      --main-shadow-color: 0 0 50px 25px rgb(0, 0, 150);
+      height: 1px;
+      width: 1px;
+      content: '';
+      box-shadow: var(--main-shadow-color);
+      -webkit-box-shadow: var(--main-shadow-color);
+      -moz-box-shadow: var(--main-shadow-color);
+      top: 50%;
+      left: 50%;
+    }
+  </style>
+</head>
 
-        div.className = 'blocky-one'
-        div.style.cssText = `
+<body id="april-17-2023">
+  <main></main>
+</body>
+<script type="text/javascript" src="./dist/backgrounder.js"></script>
+<script type="text/javascript" src="./dist/minimal-view.js"></script>
+<script type="text/javascript" src="./dist/make-and-style-divs.js"></script>
+<script>
+  const maxY = window.innerHeight
+  const maxX = window.innerWidth
+  let x = 50
+  let y = 50
+
+  const plusOrMinus10 = (val = 0) => {
+    const plusOrMinus = Math.floor(Math.random() * 15)
+
+    return Math.random() * 100 > 50 ? val + plusOrMinus : val - plusOrMinus
+  }
+
+  const randomWholeNum = (max = 0) => {
+    return Math.floor(Math.random() * max)
+  }
+
+  new Array(100).fill(null).forEach(() => {
+    if (y > maxY) {
+      return null
+    }
+
+    window.makeAndStyleDivs({}, (div) => {
+      const myShadow = `0px 2px 30px 5px rgb(0, 0, 205)`
+      const dimensions = 125
+
+      div.className = 'blocky-one'
+      div.style.cssText = `
           background: rgb(20, 0, 179);
           position: absolute;
           top: ${y};
@@ -94,11 +83,12 @@
           -webkit-box-shadow:${myShadow};
           -moz-box-shadow: ${myShadow};
         `
-      })
-
-      const endOfRow = x >= maxX
-      x = endOfRow ? plusOrMinus10(50) : x + plusOrMinus10(225)
-      y = endOfRow ? y + plusOrMinus10(225) : y + plusOrMinus10()
     })
-  </script>
+
+    const endOfRow = x >= maxX
+    x = endOfRow ? plusOrMinus10(50) : x + plusOrMinus10(225)
+    y = endOfRow ? y + plusOrMinus10(225) : y + plusOrMinus10()
+  })
+</script>
+
 </html>
