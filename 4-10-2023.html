@@ -1,68 +1,58 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="green halo" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <title>Stefan Redfield</title>
-    <style>
-      #april-10-2023 {
-        background: linear-gradient(#ffc0cb, #ff0000 65%, #e70e0e 90%);
-      }
 
-      .my-name {
-        color: black;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="green halo" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <title>Stefan Redfield</title>
+  <style>
+    #april-10-2023 {
+      background: linear-gradient(#ffc0cb, #ff0000 65%, #e70e0e 90%);
+    }
 
-      main {
-        margin-top: 5%;
-      }
+    .my-name {
+      color: black;
+    }
 
+    main {
+      margin-top: 5%;
+    }
+
+    #column {
+      height: 50%;
+      width: 20%;
+      background: linear-gradient(#e70e0e, #ff0000 75%);
+      position: relative;
+      box-shadow: 0 7px 18px 0px #ff0000;
+    }
+
+    #column::before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 100%;
+      box-shadow: 0px -60px 39px 20px green;
+    }
+
+    @media (max-width: 425px) {
       #column {
-        height: 50%;
-        width: 20%;
-        background: linear-gradient(#e70e0e, #ff0000 75%);
-        position: relative;
-        box-shadow: 0 7px 18px 0px #ff0000;
+        width: 50%;
       }
+    }
+  </style>
+</head>
 
-      #column::before {
-        position: absolute;
-        content: '';
-        height: 1px;
-        width: 100%;
-        box-shadow: 0px -60px 39px 20px green;
-      }
+<body id="april-10-2023">
+  <main>
+    <div id="column"></div>
+  </main>
+</body>
+<script type="text/javascript" src="./dist/backgrounder.js"></script>
+<script type="text/javascript" src="./dist/minimal-view.js"></script>
 
-      @media (max-width: 425px) {
-        #column {
-          width: 50%;
-        }
-      }
-    </style>
-  </head>
-  <body id="april-10-2023">
-    <script type="text/javascript" src="./dist/create-links-array.js"></script>
-    <header>
-      <p class="my-name">Stefan Redfield</p>
-      <p class="my-title">
-        Director of Engineering,
-        <a href="mailto:redfield.stefan@gmail.com" target="blank"
-          >redfield.stefan@gmail.com</a
-        >
-      </p>
-    </header>
-    <main>
-      <div id="column"></div>
-    </main>
-  </body>
-  <script type="text/javascript" src="./dist/backgrounder.js"></script>
-  <script type="text/javascript" src="./dist/minimal-view.js"></script>
 </html>

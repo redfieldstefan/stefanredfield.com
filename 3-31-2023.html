@@ -1,67 +1,57 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="flip book one" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <title>Stefan Redfield</title>
-    <style>
-      #march-31-2023 {
-        background: rgb(27, 23, 53);
-      }
 
-      #march-31-2023 main {
-        flex-direction: row;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="flip book one" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <title>Stefan Redfield</title>
+  <style>
+    #march-31-2023 {
+      background: rgb(27, 23, 53);
+    }
 
-      .fuzzy::before {
-        display: block;
-        content: '';
-        width: 50px;
-        height: 200px;
-        border-top-left-radius: 50%;
-        border-bottom-left-radius: 50px;
-        background: red;
-        box-shadow: -11px 0px 34px 41px red;
-      }
+    #march-31-2023 main {
+      flex-direction: row;
+    }
 
-      .fuzzy {
-        height: 200px;
-        width: 50px;
-        background: red;
-        border-top-left-radius: 100px;
-      }
+    .fuzzy::before {
+      display: block;
+      content: '';
+      width: 50px;
+      height: 200px;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50px;
+      background: red;
+      box-shadow: -11px 0px 34px 41px red;
+    }
 
-      .cover {
-        height: 400px;
-        width: 100px;
-        background: rgb(27, 23, 53);
-      }
-    </style>
-  </head>
-  <body id="march-31-2023">
-    <script type="text/javascript" src="./dist/create-links-array.js"></script>
-    <header>
-      <p class="my-name">Stefan Redfield</p>
-      <p class="my-title">
-        Director of Engineering,
-        <a href="mailto:redfield.stefan@gmail.com" target="blank"
-          >redfield.stefan@gmail.com</a
-        >
-      </p>
-    </header>
-    <main>
-      <div class="fuzzy"></div>
-      <div class="cover"></div>
-    </main>
-  </body>
-  <script type="text/javascript" src="./dist/backgrounder.js"></script>
-  <script type="text/javascript" src="./dist/minimal-view.js"></script>
+    .fuzzy {
+      height: 200px;
+      width: 50px;
+      background: red;
+      border-top-left-radius: 100px;
+    }
+
+    .cover {
+      height: 400px;
+      width: 100px;
+      background: rgb(27, 23, 53);
+    }
+  </style>
+</head>
+
+<body id="march-31-2023">
+  <main>
+    <div class="fuzzy"></div>
+    <div class="cover"></div>
+  </main>
+</body>
+<script type="text/javascript" src="./dist/backgrounder.js"></script>
+<script type="text/javascript" src="./dist/minimal-view.js"></script>
+
 </html>

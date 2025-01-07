@@ -1,32 +1,81 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="I love building clean, functional, accessible applications with thoughtful design. I believe positive and diverse teams create the most exciting projects."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <title>Stefan Redfield</title>
-  </head>
-  <body>
-    <header>
-      <p class="my-name">Stefan Redfield</p>
-      <p class="my-title">Director of Engineering</p>
-    </header>
-    <main>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="I love building clean, functional, accessible applications with thoughtful design. I believe positive and diverse teams create the most exciting projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <title>Stefan Redfield</title>
+  <style>
+    #main {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    #main-content {
+      margin-left: 50px;
+      width: 50%;
+    }
+
+    .my-name {
+      color: black;
+      font-size: 32px;
+      margin: 0;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .my-title {
+      font-size: 16px;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    #iframe {
+      border: none;
+      margin-left: 50px;
+      flex-grow: 1;
+      width: 50%;
+      height: 100%;
+    }
+
+    @media (max-width: 425px) {
+      #main {
+        flex-direction: column;
+      }
+
+      #main-content {
+        margin-left: 0px;
+        padding: 20px 40px;
+        width: 100%;
+      }
+
+      #iframe {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main id="main">
+    <div id="main-content">
+      <header id="header">
+        <p class="my-name">Stefan Redfield</p>
+        <p class="my-title">Director of Engineering</p>
+      </header>
       <p class="main-text">
         I manage engineering teams and architect JavaScript based products using
         primarily React, Node, and GraphQL. My goal for any project is to
@@ -37,15 +86,16 @@
         iteration.
       </p>
       <p class="main-text">
-        Email me at
-        <a
-        class="email-link"
-        href="mailto:redfield.stefan@gmail.com"
-        target="blank"
-        >redfield.stefan@gmail.com</a
-        >
+        (To the right, or below, is a little test pad I use, they're basically either CSS sketches or flip books where
+        refreshing the page flips the page, at your leisure.)
       </p>
-    </main>
-    <script type="text/javascript" src="./dist/create-links-array.js"></script>
-  </body>
+      <p class="main-text">
+        Email me at
+        <a class="email-link" href="mailto:redfield.stefan@gmail.com" target="blank">redfield.stefan@gmail.com</a>
+      </p>
+    </div>
+  </main>
+</body>
+<script type="text/javascript" src="./dist/pick-iframe.js"></script>
+
 </html>
