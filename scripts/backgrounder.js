@@ -15,10 +15,12 @@ const findBackgroundColor = (element) => {
   return `#${hex}`
 }
 
-const textify = ((id) => {
+const textify = (() => {
   const texts = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'a']
     .map((tag) => document.getElementsByTagName(tag))
     .filter((arr) => arr.length)
+
+  console.log({ texts })
 
   texts.forEach((group) => {
     for (let element of group) {

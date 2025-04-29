@@ -20,12 +20,13 @@
       flex-grow: 1;
       justify-content: center;
       align-items: center;
+      color: white;
     }
 
 
     #main-content {
-      margin-left: 50px;
-      width: 50%;
+      left: 100px;
+      position: absolute;
     }
 
     .my-name {
@@ -44,26 +45,14 @@
 
     #iframe {
       border: none;
-      margin-left: 50px;
       flex-grow: 1;
-      width: 50%;
+      width: 100%;
       height: 100%;
     }
 
     @media (max-width: 425px) {
-      #main {
-        flex-direction: column;
-      }
-
       #main-content {
-        margin-left: 0px;
-        padding: 20px 40px;
-        width: 100%;
-      }
-
-      #iframe {
-        margin-left: 0;
-        width: 100%;
+        left: auto
       }
     }
   </style>
@@ -74,28 +63,12 @@
     <div id="main-content">
       <header id="header">
         <p class="my-name">Stefan Redfield</p>
-        <p class="my-title">Director of Engineering</p>
+        <p class="my-title">Senior Software Engineer</p>
       </header>
-      <p class="main-text">
-        I manage engineering teams and architect JavaScript based products using
-        primarily React, Node, and GraphQL. My goal for any project is to
-        facilitate thoughtful planning, put together an effective team, and
-        invest in a culture that emphasizes quality, autonomy, and balance.
-        Teams like this yield products that are designed best for the problem at
-        hand, excel in user experience, and (last but not least) allow for
-        iteration.
-      </p>
-      <p class="main-text">
-        (To the right, or below, is a little test pad I use, they're basically either CSS sketches or flip books where
-        refreshing the page flips the page, at your leisure.)
-      </p>
-      <p class="main-text">
-        Email me at
-        <a class="email-link" href="mailto:redfield.stefan@gmail.com" target="blank">redfield.stefan@gmail.com</a>
-      </p>
     </div>
   </main>
 </body>
 <script type="text/javascript" src="./dist/pick-iframe.js"></script>
+<script type="text/javascript" src="./dist/backgrounder.js"></script>
 
 </html>
