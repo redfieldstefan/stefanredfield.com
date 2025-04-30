@@ -5,14 +5,10 @@ const pickPage = () => {
     "2-24-2023.html",
     "2-27-2023.html",
     "3-29-2023.html",
-    "3-31-2023.html",
     "4-10-2023.html",
     "4-17-2023.html",
-    "4-4-2023.html",
     "4-5-2023.html"
   ];
-
-  console.log({ links })
 
   const cookies = document.cookie.split(";")
     .map(function (cookieString) {
@@ -38,8 +34,6 @@ const pickPage = () => {
 
     page = links[index];
   }
-
-  console.log({ page })
 
   return page;
 };

@@ -1,11 +1,7 @@
 import pickPage from "./pick-page";
 
 const pickIframe = (() => {
-  console.log("runs")
   const page = pickPage();
-
-  console.log("page in other func", page)
-
 
   const main = document.getElementById('main');
   const iframe = document.createElement('iframe');
