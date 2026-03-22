@@ -1,0 +1,40 @@
+{
+  "name": "stefanredfield.com",
+  "version": "1.0.0",
+  "description": "What fun!",
+  "main": "index.js",
+  "type": "module",
+  "browser": {
+    "fs": false
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "format": "prettier --write .",
+    "dev": "yarn build && http-server -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redfieldstefan/stefanredfield.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redfieldstefan/stefanredfield.com/issues"
+  },
+  "homepage": "https://github.com/redfieldstefan/stefanredfield.com#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "glob": "^9.3.2",
+    "hex-contrast-color": "^1.0.1",
+    "http-server": "^14.1.1",
+    "path": "^0.12.7",
+    "rgb-hex": "^4.0.1",
+    "webpack": "^5.76.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7",
+    "webpack-cli": "^5.0.1"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

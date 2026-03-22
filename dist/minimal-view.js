@@ -1,1 +1,0 @@
-(()=>{"use strict";(e=>{const t=new URLSearchParams(window.location.search),{minimal:n}=Object.fromEntries(t.entries());if(n){const e=document.getElementsByTagName("header");for(let t of e)t.remove()}})()})();
